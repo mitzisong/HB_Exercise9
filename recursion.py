@@ -40,7 +40,16 @@ def sum_list(l):
 
 # Reverse a list without slicing or loops
 def reverse(l):
-    return []
+    if len(l) == 1:
+        return l
+    
+    item = [l.pop()]
+    new_list = reverse(l)
+    return item + new_list
+
+#print reverse([10,5,2,1])
+
+
 
 # Fibonacci returns the nth fibonacci number. The nth fibonacci number is
 # defined as fib(n) = fib(n-1) + fib(n-2)
