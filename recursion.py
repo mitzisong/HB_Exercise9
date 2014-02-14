@@ -20,11 +20,22 @@ def factorial(n):
 
 # Count the number of elements in the list l
 def count_list(l):
-    return
+   
+    if len(l) == 1:
+        return 1
+    l.pop()
+    return 1 + count_list(l)
+
 
 # Sum all of the elements in a list
 def sum_list(l):
-    return 0
+    if len(l) == 1:
+        return 1
+
+    item = l.pop()
+    return item + sum_list(l)
+
+#print sum_list([1, 2, 3, 4])
 
 
 # Reverse a list without slicing or loops
