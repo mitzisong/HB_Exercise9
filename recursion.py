@@ -47,18 +47,34 @@ def reverse(l):
     new_list = reverse(l)
     return item + new_list
 
+    #item = l.pop()
+    #return [item] + reverse(l)
+
 #print reverse([10,5,2,1])
-
-
 
 # Fibonacci returns the nth fibonacci number. The nth fibonacci number is
 # defined as fib(n) = fib(n-1) + fib(n-2)
 def fibonacci(n):
-    pass
+    if n == 0:
+        return n
+    elif n == 1:
+        return n
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+print fibonacci(5)
+
 
 # Finds the item i in the list l.... RECURSIVELY
 def find(l, i):
-    return None
+    item = l.pop()
+    if item == i:
+        return item
+    if len(l) == 0:
+        return None
+    else:
+        return find(l, i)
+
 
 # Determines if a string is a palindrome
 def palindrome(some_string):
@@ -69,6 +85,6 @@ def fold_paper(width, height, folds):
     return (0, 0)
 
 # Count up
-# Print all the numbers from 0 to target
+# Print all the numbers from 0 to target. Call by count_up(100, 0)
 def count_up(target, n):
     return
